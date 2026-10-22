@@ -1,11 +1,19 @@
 # 🎵 Music Converter & Visualizer
 
-A powerful web application that converts, visualizes, analyzes, and plays sheet music. Upload MIDI, MusicXML, ABC, or JSON files and get an interactive experience right in your browser.
-
-![Preview](https://img.shields.io/badge/status-active-success.svg)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-🚀-brightgreen)](https://ВАША_ССЫЛКА_С_RENDER.onrender.com)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Music21](https://img.shields.io/badge/Music21-9.1.0-blue)
+![Music21](https://img.shields.io/badge/Music21-10.5.0-blue)
+
+A powerful web application that converts, visualizes, analyzes, and plays sheet music. Upload MIDI, MusicXML, ABC, or JSON files and get an interactive experience right in your browser.
+
+<!-- 
+  ⚠️ ИНСТРУКЦИЯ ДЛЯ ТЕБЯ: 
+  Сделай скриншот своего сайта и перетащи его сюда, 
+  чтобы GitHub автоматически сгенерировал ссылку. 
+  Удали этот комментарий после добавления картинки.
+-->
+<!-- ![App Screenshot](./screenshot.png) -->
 
 ## ✨ Features
 
@@ -22,9 +30,10 @@ A powerful web application that converts, visualizes, analyzes, and plays sheet 
 ## 🛠 Tech Stack
 
 **Backend:**
-- Python 3.10+ / FastAPI
+- Python 3.12+ / FastAPI
 - `music21` & `converter21` (Music parsing and analysis)
-- Uvicorn
+- Uvicorn (ASGI server)
+- Docker
 
 **Frontend:**
 - Vanilla JavaScript (ES6)
@@ -35,12 +44,12 @@ A powerful web application that converts, visualizes, analyzes, and plays sheet 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.10 or higher
-- Node.js is *not* required (all frontend deps are loaded via CDN)
+- Python 3.12 or higher
+- Docker (optional, for containerized deployment)
 
 ### Installation (Local)
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/music-converter.git
+   git clone https://github.com/tatsymbixz/music-converter.git
    cd music-converter
