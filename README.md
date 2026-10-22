@@ -1,6 +1,6 @@
 # 🎵 Music Converter & Visualizer
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-🚀-brightgreen)](https://ВАША_ССЫЛКА_С_RENDER.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-🚀-brightgreen)](https://music-converter-eip3.onrender.com/)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 ![Music21](https://img.shields.io/badge/Music21-10.5.0-blue)
