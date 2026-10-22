@@ -1,0 +1,412 @@
+/* Base styles and CSS reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1b2e 0%, #2d264a 50%, #1e1a38 100%);
+    color: #e2e8f0;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Main wrapper container */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    background: #28243d;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #3f395f;
+}
+
+/* Header section */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #c084fc;
+    margin-bottom: 8px;
+    font-size: 2.2rem;
+    text-shadow: 0 2px 10px rgba(192, 132, 252, 0.2);
+}
+
+header p {
+    color: #a78bfa;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Upload section styling */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    border: 2px dashed #6d28d9;
+    border-radius: 12px;
+    background: #1f1c30;
+    margin-bottom: 25px;
+}
+
+input[type="file"] {
+    font-size: 15px;
+    color: #ddd6fe;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #ddd6fe;
+    font-size: 14px;
+}
+
+.convert-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #ddd6fe;
+}
+
+.convert-options select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #6d28d9;
+    background: #2d264a;
+    color: #ffffff;
+    outline: none;
+}
+
+/* General button component styles */
+button {
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background: #7c3aed;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    background: #4c1d95;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+#downloadBtn {
+    background-color: #10b981;
+}
+
+#downloadBtn:hover {
+    background-color: #059669;
+}
+
+#statusMessage {
+    font-weight: bold;
+    color: #34d399;
+}
+
+#statusMessage.error {
+    color: #f87171;
+}
+
+/* Score container */
+.score-container {
+    width: 100%;
+    min-height: 250px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Analysis panel layout */
+#analysisPanel {
+    display: none;
+    margin-bottom: 20px;
+    background: #1f1c30;
+    border: 1px solid #4c1d95;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.analysis-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.key-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.key-label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #c084fc;
+}
+
+.key-value {
+    font-size: 15px;
+    padding: 4px 14px;
+    background: #581c87;
+    color: #f3e8ff;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #7e22ce;
+}
+
+.transpose-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.transpose-label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #c084fc;
+}
+
+.transpose-btn {
+    padding: 4px 12px;
+    font-size: 16px;
+    background: #4c1d95;
+    color: #ffffff;
+}
+
+.transpose-btn:hover {
+    background: #581c87;
+}
+
+#transposeDisplay {
+    font-family: monospace;
+    font-size: 16px;
+    min-width: 30px;
+    text-align: center;
+    color: #f3e8ff;
+}
+
+/* Audio player container styles */
+#playerPanel {
+    background: #1f1c30;
+    border: 1px solid #4c1d95;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.player-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.player-row button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+#seekBar {
+    flex: 1;
+    cursor: pointer;
+    accent-color: #a855f7;
+}
+
+#timeDisplay {
+    font-family: monospace;
+    font-size: 14px;
+    color: #c084fc;
+    min-width: 90px;
+    text-align: right;
+}
+
+.tempo-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #ddd6fe;
+}
+
+.tempo-box input[type="range"] {
+    width: 100px;
+    accent-color: #a855f7;
+}
+
+.tempo-val {
+    font-family: monospace;
+    width: 40px;
+    color: #f3e8ff;
+}
+
+.loop-group {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.loop-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    background: #4c1d95;
+}
+
+.loop-btn:hover {
+    background: #581c87;
+}
+
+.loop-btn.active {
+    background: #a855f7;
+}
+
+.options-row {
+    margin-top: 10px;
+}
+
+.options-row label {
+    color: #ddd6fe;
+}
+
+/* Track list styling */
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.track-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: #2d264a;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #3f395f;
+    flex-wrap: wrap;
+}
+
+.track-row .track-name {
+    flex: 1;
+    min-width: 140px;
+    color: #f3e8ff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-row select {
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+    border: 1px solid #6d28d9;
+    background: #1f1c30;
+    color: #ffffff;
+}
+
+.track-row input[type="range"] {
+    width: 80px;
+    cursor: pointer;
+    accent-color: #a855f7;
+}
+
+.track-row button {
+    padding: 4px 10px;
+    font-size: 12px;
+    background: #4c1d95;
+    color: #ffffff;
+}
+
+.track-row button:hover {
+    background: #581c87;
+}
+
+.track-row button.active-mute {
+    background: #ef4444;
+    color: white;
+}
+
+.track-row button.active-solo {
+    background: #f59e0b;
+    color: white;
+}
+
+/* Export panel */
+#exportPanel {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#exportPdfBtn {
+    background-color: #7c3aed;
+}
+
+#exportSvgBtn {
+    background-color: #0d9488;
+}
+
+/* Chord view cards */
+.chord-track {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.chord-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2d264a;
+    border: 1px solid #6d28d9;
+    border-radius: 8px;
+    padding: 8px 14px;
+    min-width: 65px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.chord-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #f3e8ff;
+}
+
+.chord-roman {
+    font-size: 12px;
+    color: #c084fc;
+    margin-top: 2px;
+}
+
+.chord-measure {
+    font-size: 10px;
+    color: #a78bfa;
+    margin-top: 4px;
+    text-transform: uppercase;
+}

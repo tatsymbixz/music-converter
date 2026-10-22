@@ -1,0 +1,46 @@
+# 🎵 Music Converter & Visualizer
+
+A powerful web application that converts, visualizes, analyzes, and plays sheet music. Upload MIDI, MusicXML, ABC, or JSON files and get an interactive experience right in your browser.
+
+![Preview](https://img.shields.io/badge/status-active-success.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Music21](https://img.shields.io/badge/Music21-9.1.0-blue)
+
+## ✨ Features
+
+- **File Conversion:** Convert between MusicXML, ABC, and MIDI formats.
+- **Sheet Music Rendering:** Beautiful, high-quality rendering using OpenSheetMusicDisplay (OSMD).
+- **Advanced Audio Player:** Built with Tone.js, featuring multi-track instruments (Piano, Strings, Guitar, Bass, Drums).
+- **Smart Analysis:** Automatically detects the musical key and extracts chords (with Roman numerals).
+- **Transposition:** Transpose the entire score up or down by semitones with a single click.
+- **Practice Tools:** Tempo control (0.5x - 2.0x), A-B loop sectioning, metronome, and count-in.
+- **Export Options:** Download rendered scores as PDF or SVG.
+- **Interactive UI:** Click anywhere on the sheet music to seek to that position in the audio.
+- *(Beta)* Playback cursor with manual sync offset adjustment.
+
+## 🛠 Tech Stack
+
+**Backend:**
+- Python 3.10+ / FastAPI
+- `music21` & `converter21` (Music parsing and analysis)
+- Uvicorn
+
+**Frontend:**
+- Vanilla JavaScript (ES6)
+- `opensheetmusicdisplay` (Sheet music rendering)
+- `Tone.js` & `@tonejs/midi` (Audio synthesis and playback)
+- `jsPDF` & `svg2pdf.js` (Exporting)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.10 or higher
+- Node.js is *not* required (all frontend deps are loaded via CDN)
+
+### Installation (Local)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/music-converter.git
+   cd music-converter

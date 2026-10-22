@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Converter & Visualizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- External CDN dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/opensheetmusicdisplay@1.8.0/build/opensheetmusicdisplay.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg2pdf.js@2.2.3/dist/svg2pdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.8.49/build/Tone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tonejs/midi@2.0.28/build/Midi.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- App Header -->
+        <header>
+            <h1>Music Converter &amp; Visualizer</h1>
+            <p>Upload a MIDI, MusicXML, ABC, or JSON file to visualize, analyze, and convert it.</p>
+        </header>
+
+        <main>
+            <!-- File uploading section -->
+            <div class="upload-section">
+                <input type="file" id="fileInput" accept=".mid,.midi,.xml,.musicxml,.abc,.json">
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="quantizeCheck">
+                    Fix rhythm (Quantize notes to grid)
+                </label>
+
+                <div class="convert-options">
+                    <label for="formatSelect">Convert to:</label>
+                    <select id="formatSelect">
+                        <option value="musicxml">MusicXML (.xml)</option>
+                        <option value="abc">ABC Notation (.abc)</option>
+                        <option value="midi">MIDI (.mid)</option>
+                    </select>
+                </div>
+
+                <button id="convertBtn">Process &amp; Display</button>
+                <button id="downloadBtn" style="display: none;">Download Converted File</button>
+                <div id="statusMessage"></div>
+            </div>
+
+            <!-- Analysis and Key signature panel -->
+            <div id="analysisPanel">
+                <div class="analysis-header">
+                    <div class="key-box">
+                        <span class="key-label">Key:</span>
+                        <span id="keyDisplay" class="key-value">C major</span>
+                    </div>
+                    
+                    <div class="transpose-box">
+                        <span class="transpose-label">Transpose:</span>
+                        <button id="transposeDownBtn" class="transpose-btn">-</button>
+                        <span id="transposeDisplay">0</span>
+                        <button id="transposeUpBtn" class="transpose-btn">+</button>
+                    </div>
+                </div>
+                
+                <div class="chord-track" id="chordTrack"></div>
+            </div>
+
+            <!-- Audio playback controls -->
+            <div id="playerPanel">
+                <div class="player-row">
+                    <button id="playBtn" title="Play / Pause">▶ Play</button>
+                    <button id="stopBtn" title="Stop">⏹ Stop</button>
+                    <input type="range" id="seekBar" min="0" max="1000" value="0">
+                    <span id="timeDisplay">0:00 / 0:00</span>
+                </div>
+
+                <div class="player-row" style="margin-top: 12px; flex-wrap: wrap;">
+                    <div class="tempo-box">
+                        <span>Tempo:</span>
+                        <input type="range" id="tempoSlider" min="0.5" max="2" step="0.1" value="1">
+                        <span id="tempoDisplay" class="tempo-val">1.0x</span>
+                    </div>
+
+                    <div class="loop-group">
+                        <button id="setLoopABtn" class="loop-btn">Set A (Start)</button>
+                        <button id="setLoopBBtn" class="loop-btn">Set B (End)</button>
+                        <button id="clearLoopBtn" class="loop-btn" style="background: #ef4444; display: none;">Clear Loop</button>
+                    </div>
+                </div>
+
+                <div class="player-row options-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="countInCheck"> Count-in (1 bar)
+                    </label>
+                    <label class="checkbox-label" style="margin-left: 15px;">
+                        <input type="checkbox" id="metronomeCheck"> Metronome
+                    </label>
+                </div>
+
+                <div class="track-list" id="trackList"></div>
+            </div>
+
+            <!-- PDF / SVG Export panel -->
+            <div id="exportPanel">
+                <button id="exportPdfBtn">Export PDF</button>
+                <button id="exportSvgBtn">Export SVG</button>
+            </div>
+
+            <!-- Sheet music rendering container -->
+            <div id="osmd-container" class="score-container"></div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
