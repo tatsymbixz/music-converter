@@ -7,13 +7,8 @@
 
 A powerful web application that converts, visualizes, analyzes, and plays sheet music. Upload MIDI, MusicXML, ABC, or JSON files and get an interactive experience right in your browser.
 
-<!-- 
-  ⚠️ ИНСТРУКЦИЯ ДЛЯ ТЕБЯ: 
-  Сделай скриншот своего сайта и перетащи его сюда, 
-  чтобы GitHub автоматически сгенерировал ссылку. 
-  Удали этот комментарий после добавления картинки.
--->
-<!-- ![App Screenshot](./screenshot.png) -->
+<img width="328" height="470" alt="image" src="https://github.com/user-attachments/assets/dd34051d-c310-4799-b699-90fc70ae9b2e" />
+
 
 ## ✨ Features
 
