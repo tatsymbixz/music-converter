@@ -1,5 +1,5 @@
 fastapi==0.109.0
 uvicorn==0.27.0
 python-multipart==0.0.6
-music21==9.7.1
+music21==10.5.0
 converter21==4.0.2
