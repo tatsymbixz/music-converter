@@ -9,6 +9,13 @@ A powerful web application that converts, visualizes, analyzes, and plays sheet 
 
 <img width="328" height="470" alt="image" src="https://github.com/user-attachments/assets/dd34051d-c310-4799-b699-90fc70ae9b2e" />
 
+A powerful web application that converts, visualizes, analyzes, and plays sheet music. Upload MIDI, MusicXML, ABC, or JSON files and get an interactive experience right in your browser.
+
+![Preview](https://img.shields.io/badge/status-active-success.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Music21](https://img.shields.io/badge/Music21-9.1.0-blue)
+
 
 ## ✨ Features
 
@@ -25,10 +32,9 @@ A powerful web application that converts, visualizes, analyzes, and plays sheet 
 ## 🛠 Tech Stack
 
 **Backend:**
-- Python 3.12+ / FastAPI
+- Python 3.10+ / FastAPI
 - `music21` & `converter21` (Music parsing and analysis)
-- Uvicorn (ASGI server)
-- Docker
+- Uvicorn
 
 **Frontend:**
 - Vanilla JavaScript (ES6)
@@ -39,12 +45,12 @@ A powerful web application that converts, visualizes, analyzes, and plays sheet 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.12 or higher
-- Docker (optional, for containerized deployment)
+- Python 3.10 or higher
+- Node.js is *not* required (all frontend deps are loaded via CDN)
 
 ### Installation (Local)
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tatsymbixz/music-converter.git
+   git clone https://github.com/your-username/music-converter.git
    cd music-converter
